@@ -1,7 +1,7 @@
 "use client";
 
-import ProfileCard from "@/components/ProfileCard";
+import HealthHero from "@/components/HealthHero";
 
 export default function Home() {
-  return <ProfileCard />;
+  return <HealthHero />;
 }
