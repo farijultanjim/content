@@ -1,11 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 @import "tailwindcss";
 
 @theme {
-
   --font-display: "Roboto", sans-serif;
   --font-inter: "Inter", sans-serif;
 }
 
+.card123456 {
+  position: relative;
+  width: 400px;
+  height: 550px;
+  background-color: #bfd9b7;
+  clip-path: path(
+    "M 300,0 A 20,20 0,0,1 320,20 L 320,60 A 15,15 0,0,0 335,75 L 385,75 A 15,15 0,0,1 400,90 L 400,535 A 15,15 0,0,1 385,550 L 185,550 A 15,15 0,0,1 170,535 L 170,495 A 15,15 0,0,0 155,480 L 15,480 A 15,15 0,0,1 0,465 L 0,15 A 15,15 0,0,1 15,0 Z"
 
+    /* "M 300,0 A 20,20 0,0,1 320,20 L 320,40 A 20,20 0,0,0 360,80 L 380,80 A 20,20 0,0,1 400,100 L 400,530 A 20,20 0,0,1 380,550 L 220,550 A 20,20 0,0,1 200,530 L 200,520 A 20,20 0,0,1 170,490 L 20,490 A 20,20 0,0,1 0,470 L 0,20 L 20,0 Z" */
+  ); 
+
+
+  overflow: hidden;
+}

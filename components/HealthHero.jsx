@@ -6,9 +6,9 @@ export default function HealthHero() {
   return (
     <>
       <Header />
-      <div className="font-inter grid grid-cols-2 gap-4 h-screen px-16 max-w-7xl mx-auto">
+      <div className="font-inter grid grid-cols-2 gap-4 h-screen px-16 max-w-7xl mx-auto items-center justify-center">
         {/* Left side */}
-        <div className="flex flex-col justify-center items-start gap-4">
+        <div className="flex flex-col justify-center items-start gap-5">
           <h1 className="text-8xl font-semi-bold text-[#090909] leading-20">
             We Take Care About Your{" "}
             <span className="text-[#BFD9B7]">Health</span>
@@ -54,42 +54,24 @@ export default function HealthHero() {
         </div>
 
         {/* Right side */}
-        <div>
+        <div className="">
           <div className="relative max-w-[400px] mx-auto mt-16">
-            {/* Custom clipped container */}
-            <div
-              className="bg-[#BFD9B7] p-2 overflow-hidden relative"
-              style={{
-                clipPath: `polygon(
-            0% 0%, 
-            85% 0%, 
-            85% 10%, 
-            100% 10%, 
-            100% 100%, 
-            15% 100%, 
-            15% 90%, 
-            0% 90%
-          )`,
-                borderRadius: "40px",
-              }}
-            >
-              <Image
+            <div className="card">
+              <img
                 src="/profile.jpg"
-                width={500}
-                height={600}
-                alt="Ingredient Grid"
-                className="w-full h-auto object-cover"
+                alt="Profile Grid"
+                className="w-full h-full object-cover"
               />
             </div>
 
-            {/* Top-right circular button (sits in cutout space) */}
+            {/* Top-right circle button */}
             <div className="absolute top-2 right-2 bg-white w-12 h-12 rounded-full flex items-center justify-center shadow z-20">
               <span className="text-[#BFD9B7] text-xl">➜</span>
             </div>
 
             {/* Bottom-left profile card */}
-            <div className="absolute bottom-[-24px] left-4 bg-white px-4 py-2 pr-6 rounded-full shadow flex items-center gap-3 z-20">
-              <Image
+            <div className="absolute bottom-[-24px] left-1 bg-white px-4 py-2 pr-6 rounded-full shadow flex items-center gap-3 z-20">
+              <img
                 src="/profile.jpg"
                 alt="Dr. Richard Lee"
                 width={40}

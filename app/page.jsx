@@ -1,7 +1,13 @@
 "use client";
 
-import HealthHero from "@/components/HealthHero";
+import BentoGridHero from "@/components/benjoGridHero/BentoGridHero";
+
+
 
 export default function Home() {
-  return <HealthHero />;
+  return (
+    <main>
+      <BentoGridHero />
+    </main>
+  );
 }
