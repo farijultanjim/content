@@ -1,6 +1,7 @@
 "use client";
 
-import BentoGridHero from "@/components/benjoGridHero/BentoGridHero";
+import BentoGridHero from "@/components/bentoGridHero/BeentoGrid";
+
 
 
 
