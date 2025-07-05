@@ -1,13 +1,16 @@
 "use client";
 
-import BentoGridHero from "@/components/benjoGridHero/BentoGridHero";
+import PricingPlans from "@/components/PricingPlans/PricingPlans";
+import PricingPlansCards from "@/components/PricingPlansCards/PricingPlansCards";
+
 
 
 
 export default function Home() {
   return (
     <main>
-      <BentoGridHero />
+      {/* <PricingPlans /> */}
+      <PricingPlansCards />
     </main>
   );
 }
