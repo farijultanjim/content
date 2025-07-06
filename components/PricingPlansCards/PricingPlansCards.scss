@@ -1,7 +1,5 @@
-// Variables
-// $primary-color: #2d3748;
-// $secondary-color: #4a5568;
-// $accent-color: #48bb78;
+@use "sass:color";
+
 $text-primary: #222222;
 $text-secondary: #4a5568;
 $text-muted: #ababab;
@@ -9,9 +7,9 @@ $border-color: #e2e8f0;
 $bg-primary: #fcfcfc;
 $bg-secondary: #f1f1f1;
 $bg-dark: #303030;
-$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.078);
+$shadow-md: 0 1px 3px rgba(0, 0, 0, 0.12);
+$shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
 
 @mixin flex-center {
   display: flex;
@@ -33,8 +31,6 @@ $shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
   font-size: 14px;
   padding: 10px 20px;
-
-  
 }
 
 .pricing-container {
@@ -47,7 +43,7 @@ $shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 
 .pricing-header {
   @include flex-between;
-  padding: 16px 24px;
+  padding: 16px 170px;
   border-bottom: 2px solid $border-color;
 
   .logo {
@@ -116,7 +112,7 @@ $shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     margin: 0 auto 48px;
     width: fit-content;
-    .toggle-btn{
+    .toggle-btn {
       @include button-base;
       background-color: transparent;
       color: $text-secondary;
@@ -128,14 +124,14 @@ $shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
       display: flex;
       align-items: center;
       gap: 6px;
-      
+
       &.active {
         background: $bg-primary;
         color: $text-primary;
         box-shadow: $shadow-sm;
       }
 
-      .savings-badge {        
+      .savings-badge {
         height: 6px;
         width: 6px;
         top: 2px;
@@ -149,27 +145,35 @@ $shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 
   .pricing-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 24px;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
-    
+
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
       gap: 16px;
     }
 
-
     .pricing-card {
       background: $bg-secondary;
-      padding: 1.5px;
-      border-radius: 16px;
+      border-radius: 20px;
+      border: 3px solid $bg-secondary;
+      &.current {
+        box-shadow: $shadow-lg;
+        background: url("/background-rocks.jpg");
+        background-size: cover;
+      }
+      
 
       .plan-name {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 600;
         color: $text-primary;
-        padding: 6px 14px;
+        padding: 10px 20px;
+        &.current {
+          color: white;
+        }
       }
 
       .card-details {
@@ -177,16 +181,20 @@ $shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
         border-radius: 16px;
         padding: 16px;
         
+
         .plan-description {
-          font-size: 12px;
+          font-size: 14px;
           margin-bottom: 12px;
-          font-weight: 400;;
+          font-weight: 400;
         }
 
         .price-section {
-          background: $bg-secondary;
-          padding: 8px;
-          border-radius: 8px;
+          background: #f7f7f7;
+          padding: 10px;
+          border-radius: 12px;
+          margin-bottom: 16px;
+          border: 1px solid $border-color;
+          box-shadow: $shadow-sm;
 
           .price {
             display: flex;
@@ -214,6 +222,60 @@ $shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
               padding: 3px 0 0 0;
             }
           }
+
+          .plan-button {
+            @include button-base;
+            width: 100%;
+            padding: 8px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 16px;
+            border-radius: 12px;
+            border: 1px solid $border-color;
+            box-shadow: $shadow-md;
+            &.primary {
+              background: $bg-dark;
+              color: white;
+              // font-weight: 600;
+              &:hover {
+                background: color.adjust($bg-dark, $lightness: -5%);
+              }
+            }
+            &.secondary {
+              background: #ededed;
+              color: $text-muted;
+              border: 1px solid $border-color;
+              // font-weight: 500;
+              &:hover {
+                background: color.adjust($bg-primary, $lightness: -15%);
+              }
+            }
+            &.current {
+              background: #e4e4e4;
+              color: $text-primary;
+              // font-weight: 600;
+              border: 1px solid #cccccc;
+              &:hover {
+                background: color.adjust($bg-primary, $lightness: -15%);
+              }
+            }
+          }
+        }
+
+        .features-list {
+          padding: 10px 10px;
+          .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 12px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+          }
+
         }
       }
     }

@@ -106,7 +106,9 @@ const PricingPlansCards = () => {
                   plan.popular ? "popular" : ""
                 }`}
               >
-                <h2 className="plan-name">{plan.name}</h2>
+                <h2 className={`${plan.current ? "current" : ""} plan-name`}>
+                  {plan.name}
+                </h2>
                 <div className="card-details">
                   <p className="plan-description">{plan.description}</p>
                   <div className="price-section">
@@ -115,10 +117,10 @@ const PricingPlansCards = () => {
                       <span className="amount">
                         {plan.price[billingPeriod]}
                       </span>
-                      <span className="period">USD / <br /> month</span>
+                      <span className="period">
+                        USD / <br /> month
+                      </span>
                     </div>
-                    
-                            
 
                     <button
                       className={`plan-button ${plan.buttonStyle} ${
