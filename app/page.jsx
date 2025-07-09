@@ -1,13 +1,11 @@
 "use client";
 
-import MultiFilterSetup from "@/components/MultiFilterSetup/MultiFilterSetup";
-import PricingPlansCards from "@/components/PricingPlansCards/PricingPlansCards";
+import TeamSection from "@/components/TeamSection/TeamSection";
 
 export default function Home() {
   return (
-    <main className="bg-[#e7e9f3]">
-      {/* <PricingPlansCards /> */}
-      <MultiFilterSetup />
+    <main>
+      <TeamSection />
     </main>
   );
 }
