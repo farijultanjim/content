@@ -1,0 +1,183 @@
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+ 
+  // background-color: #c72727;
+
+  .card {
+    position: relative;
+    width: 400px;
+    height: 480px;
+    background-color: #fff;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    // border: 1px solid #000;
+
+    .box {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      border-radius: 1.25rem;
+      overflow: hidden;
+
+      .imgBox {
+        position: absolute;
+        inset: 0;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .icon {
+        position: absolute;
+        top: -0.375rem;
+        right: -0.375rem;
+        width: 5rem;
+        height: 5rem;
+        background: #fff;
+        border-bottom-left-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .icon::before {
+        content: "";
+        position: absolute;
+        width: 2.25rem;
+        height: 2.25rem;
+        // background: goldenrod;
+        top: 0.355rem;
+        left: -2.25rem;
+        border-top-right-radius: 50%;
+        box-shadow: 0.9rem 0 0 0 #ffffff;
+      }
+      .icon::after {
+        content: "";
+        position: absolute;
+        width: 2.25rem;
+        height: 2.25rem;
+        // background: rgb(51, 218, 32);
+        top: 5rem;
+        right: 0.38rem;
+        border-top-right-radius: 50%;
+        box-shadow: 0.9rem 0 0 0 #ffffff;
+      }
+
+      .iconBox {
+        background-color: #C4CDCC;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        width: 78%;
+        height: 78%;
+        z-index: 1;
+        padding: 1rem;
+        color: #fff;
+      }
+
+      .profile {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 200px;
+        height: 5rem;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: bold;
+        border-top-right-radius: 42px;
+      }
+      .profile::before {
+        content: "";
+        position: absolute;
+        width: 2.25rem;
+        height: 2.25rem;
+        // background: rgb(245, 166, 227);
+        top: -2.255rem;
+        left: 0rem;
+        border-bottom-left-radius: 50%;
+        box-shadow: -0.5rem 0.2rem 0 0 #ffffff;
+      }
+      .profile::after {
+        content: "";
+        position: absolute;
+        width: 2.25rem;
+        height: 2.25rem;
+        // background: rgb(245, 166, 227);
+        bottom: 0rem;
+        right: -2.25rem;
+        border-bottom-left-radius: 50%;
+        box-shadow: -0.5rem 0.2rem 0 0 #ffffff;
+      }
+
+
+      .profileCard{
+        background-color: #C4CDCC;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;;
+        width: 94%;
+        height: 85%;
+        z-index: 1;
+        padding: 8px;
+        border: 1px solid #dbdada;
+
+        .profileContainer{
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          gap: 0.5rem;
+          width: 100%;
+          height: 100%;
+
+          .profileImg {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 50%;
+              border: 1px solid #ffffff;
+            }
+          }
+
+          .profileInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            h3 {
+              font-size: 12px;
+              color: #303030;
+              font-weight: 500;
+              line-height: 10px;
+
+            }
+            p {
+              font-size: 8px;
+              color: #514e4e;
+              font-weight: 500;
+              line-height: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

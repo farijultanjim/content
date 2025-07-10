@@ -1,11 +1,14 @@
 "use client";
 
-import TeamSection from "@/components/TeamSection/TeamSection";
+import HealthHero from "@/components/HealthHero";
+import Testing from "@/components/testing/Testing";
+
 
 export default function Home() {
   return (
     <main>
-      <TeamSection />
+      <Testing />
+      {/* <HealthHero /> */}
     </main>
   );
 }
