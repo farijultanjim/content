@@ -1,14 +1,14 @@
 "use client";
 
-import HealthHero from "@/components/HealthHero";
-import Testing from "@/components/testing/Testing";
+import LoginPage from "@/components/LoginPage/LoginPage";
+import PolygonCard from "@/components/PolygonCard/PolygonCard";
 
 
 export default function Home() {
   return (
     <main>
-      <Testing />
-      {/* <HealthHero /> */}
+      <PolygonCard />
+      <LoginPage />
     </main>
   );
 }

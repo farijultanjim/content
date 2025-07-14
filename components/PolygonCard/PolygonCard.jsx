@@ -1,17 +1,16 @@
 import React from "react";
 
-import styles from "./testing.module.scss";
+import styles from "./polygonCard.module.scss";
 import { ArrowUpRight } from "lucide-react";
 
-const Testing = () => {
+const PolygonCard = () => {
   return (
-    <div className="grid grid-cols-2">
-      <div></div>
-      <div className={styles.right}>
+    <>
+      <div className={styles.container}>
         <div className={styles.card}>
           <div className={styles.box}>
             <div className={styles.imgBox}>
-              <img src="/profile.jpg" alt="profile" />
+              <img src="/arch1.jpg" alt="profile" />
             </div>
             <div className={styles.icon}>
               <ArrowUpRight className={styles.iconBox} />
@@ -21,11 +20,11 @@ const Testing = () => {
               <div className={styles.profileCard}>
                 <div className={styles.profileContainer}>
                   <div className={styles.profileImg}>
-                    <img src="/profile-uncroped.jpg" alt="Profile" />
+                    <img src="/profile-square.jpg" alt="Profile" />
                   </div>
                   <div className={styles.profileInfo}>
                     <h3>John Doe</h3>
-                    <p>Web Developer</p>
+                    <p>Architect</p>
                   </div>
                 </div>
               </div>
@@ -33,8 +32,8 @@ const Testing = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default Testing;
+export default PolygonCard;
