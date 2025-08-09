@@ -1,13 +1,11 @@
 "use client";
 
-import BentoGridHero2 from "@/components/BentoGridHero2/BentoGridHero2";
-import ChatInterface from "@/components/ChatInterface/ChatInterface";
+import SettingsModal from "@/components/SettingsModal/SettingsModal";
 
 export default function Home() {
   return (
     <main>
-      {/* <BentoGridHero2 /> */}
-      <ChatInterface />
+      <SettingsModal />
     </main>
   );
 }
